@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 
-struct Landmark: Hashable, Codable {
-    var id: Int
+struct landmark: Hashable, Codable {
+    var uid: Int
     var name: String
     var park: String
     var state: String
@@ -30,4 +30,15 @@ struct Landmark: Hashable, Codable {
         var latitude: Double
         var longitude: Double
     }
+    
+    // Define the CodingKeys enum to map JSON keys to your struct's property names
+        enum CodingKeys: String, CodingKey {
+            case uid = "id" // Map the JSON key "id" to the property "uid"
+            case name
+            case park
+            case state
+            case description
+            case imageName
+            case coordinates
+        }
 }
