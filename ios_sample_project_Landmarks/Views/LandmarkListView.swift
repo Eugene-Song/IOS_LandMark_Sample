@@ -9,10 +9,19 @@ import SwiftUI
 
 struct LandmarkListView: View {
     var body: some View {
-        List(landmarks, id: \.uid){ landmark in
-//            Text("\(landmark.uid)")
-            LandmarkRowView(landmark: landmark)
+        NavigationSplitView {
+            List(landmarks){ landmark in
+                NavigationLink {
+                    LandmarkDetailView(landmark: landmark)
+                } label: {
+                    LandmarkRowView(landmark: landmark)
+                }
+            }
+            .navigationTitle("LandMarks")
+        } detail: {
+            Text("Test Only")
         }
+
     }
 }
 

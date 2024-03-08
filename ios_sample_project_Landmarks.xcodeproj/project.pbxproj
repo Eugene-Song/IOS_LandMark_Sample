@@ -21,6 +21,7 @@
 		DB69F1D52B9A376900CA28BE /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = DB69F1D42B9A376900CA28BE /* landmarkData.json */; };
 		DB69F1D82B9A3D2B00CA28BE /* LandmarkRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69F1D72B9A3D2B00CA28BE /* LandmarkRowView.swift */; };
 		DB69F1DA2B9A3FBC00CA28BE /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69F1D92B9A3FBC00CA28BE /* LandmarkListView.swift */; };
+		DB69F1DC2B9A433F00CA28BE /* LandmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69F1DB2B9A433F00CA28BE /* LandmarkDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		DB69F1D42B9A376900CA28BE /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		DB69F1D72B9A3D2B00CA28BE /* LandmarkRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRowView.swift; sourceTree = "<group>"; };
 		DB69F1D92B9A3FBC00CA28BE /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
+		DB69F1DB2B9A433F00CA28BE /* LandmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				DB69F1CA2B9A283A00CA28BE /* MapView.swift */,
 				DB69F1D72B9A3D2B00CA28BE /* LandmarkRowView.swift */,
 				DB69F1D92B9A3FBC00CA28BE /* LandmarkListView.swift */,
+				DB69F1DB2B9A433F00CA28BE /* LandmarkDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				DB69F1CF2B9A368D00CA28BE /* Model.swift in Sources */,
 				DB3C9E322B9A1B77005E58C5 /* ContentView.swift in Sources */,
+				DB69F1DC2B9A433F00CA28BE /* LandmarkDetailView.swift in Sources */,
 				DB69F1DA2B9A3FBC00CA28BE /* LandmarkListView.swift in Sources */,
 				DB69F1D82B9A3D2B00CA28BE /* LandmarkRowView.swift in Sources */,
 				DB69F1CB2B9A283A00CA28BE /* MapView.swift in Sources */,

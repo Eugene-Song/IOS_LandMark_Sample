@@ -7,10 +7,10 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
-
-struct landmark: Hashable, Codable {
-    var uid: Int
+struct landmark: Hashable, Codable, Identifiable {
+    var id: Int
     var name: String
     var park: String
     var state: String
@@ -24,6 +24,11 @@ struct landmark: Hashable, Codable {
     }
     
     private var coordinates: Coordinates
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
+    }
 
 
     struct Coordinates: Hashable, Codable {
@@ -31,14 +36,4 @@ struct landmark: Hashable, Codable {
         var longitude: Double
     }
     
-    // Define the CodingKeys enum to map JSON keys to your struct's property names
-        enum CodingKeys: String, CodingKey {
-            case uid = "id" // Map the JSON key "id" to the property "uid"
-            case name
-            case park
-            case state
-            case description
-            case imageName
-            case coordinates
-        }
 }
