@@ -10,6 +10,18 @@ import Foundation
 class ModelData {
     var landmarks: [landmark] = load("landmarkData.json")    
     var hikes: [Hike] = load("hikeData.json")
+    
+    var categories: [String: [landmark]] {
+        Dictionary(
+            grouping: landmarks,
+            by: { $0.category.rawValue }
+        )
+    }
+    
+    var features: [landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+
 }
 
 
