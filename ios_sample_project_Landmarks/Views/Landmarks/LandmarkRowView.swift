@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LandmarkRowView: View {
     var landmark: landmark
@@ -19,11 +20,17 @@ struct LandmarkRowView: View {
             Spacer()
         }
         
+        if landmark.isFavorite {
+            Image(systemName: "star.fill")
+                .foregroundStyle(.yellow)
+        }
+        
     }
 }
 
 #Preview() {
     Group {
+        let landmarks = ModelData().landmarks
         LandmarkRowView(landmark: landmarks[0])
         Divider()
         LandmarkRowView(landmark: landmarks[1])

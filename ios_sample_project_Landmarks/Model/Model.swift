@@ -6,7 +6,10 @@
 //
 import Foundation
 
-var landmarks: [landmark] = load("landmarkData.json")
+@Observable
+class ModelData {
+    var landmarks: [landmark] = load("landmarkData.json")    
+}
 
 
 func load<T: Decodable>(_ filename: String) -> T {
